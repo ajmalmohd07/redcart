@@ -18,7 +18,7 @@ use Illuminate\Auth\Events\Verified;
 
 Route::get('/', [HomeController::class, 'index']);
 
-Route::middleware([
+Route::middleware([ 
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
